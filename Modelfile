@@ -1,0 +1,9 @@
+FROM llama3.2:1b-instruct-fp16
+PARAMETER num_ctx 768
+PARAMETER num_thread 4
+PARAMETER temperature 0.8
+PARAMETER top_k 40
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.2
+PARAMETER stop "</s>"
+PARAMETER seed 42 

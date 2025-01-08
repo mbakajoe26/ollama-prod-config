@@ -1,0 +1,48 @@
+;;
+;; Domain:     joelmbaka.site.
+;; Exported:   2025-01-08 03:04:08
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+joelmbaka.site	3600	IN	SOA	arushi.ns.cloudflare.com. dns.cloudflare.com. 2048797204 10000 2400 604800 3600
+
+;; NS Records
+joelmbaka.site.	86400	IN	NS	arushi.ns.cloudflare.com.
+joelmbaka.site.	86400	IN	NS	pete.ns.cloudflare.com.
+
+;; A Records
+joelmbaka.site.	1	IN	A	192.0.2.1 ; cf_tags=cf-proxied:true
+
+;; CNAME Records
+ollama.joelmbaka.site.	1	IN	CNAME	9ce489d0-b87b-4ccd-b051-da10aafb5ee3.cfargotunnel.com
+www.joelmbaka.site.	1	IN	CNAME	be1c3d36-a84d-46c8-b6b7-6184f2363bd1.cfargotunnel.com. ; cf_tags=cf-proxied:true
+
+;; MX Records
+joelmbaka.site.	1	IN	MX	10 eforward3.registrar-servers.com.
+joelmbaka.site.	1	IN	MX	10 eforward2.registrar-servers.com.
+joelmbaka.site.	1	IN	MX	10 eforward1.registrar-servers.com.
+joelmbaka.site.	1	IN	MX	15 eforward4.registrar-servers.com.
+joelmbaka.site.	1	IN	MX	20 eforward5.registrar-servers.com.
+
+;; TXT Records
+joelmbaka.site.	1	IN	TXT	"v=spf1 include:spf.efwd.registrar-servers.com ~all"

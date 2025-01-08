@@ -1,0 +1,19 @@
+tunnel: 9ce489d0-b87b-4ccd-b051-da10aafb5ee3
+credentials-file: C:\Users\USER\.cloudflared\9ce489d0-b87b-4ccd-b051-da10aafb5ee3.json
+
+# Optimized logging
+logfile: C:\Users\USER\.cloudflared\cloudflared.log
+loglevel: info
+
+protocol: http2
+
+ingress:
+  - hostname: ollama.joelmbaka.site
+    service: http://localhost:11434
+    originRequest:
+      httpHostHeader: "localhost:11434"
+      noTLSVerify: true
+      connectTimeout: 30s
+      headers:
+        model: "llama-prod"
+  - service: http_status:404
